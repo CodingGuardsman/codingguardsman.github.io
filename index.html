@@ -4,131 +4,188 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bryan Lee · Stagworks</title>
-<meta name="description" content="Games and projects by Bryan Lee (Stagworks): Royal Interrogator, After Class, and more.">
+<meta name="description" content="Bryan Lee, founder of Stagworks. Indie games Royal Interrogator and After Class, plus software, data and consulting work.">
 <meta property="og:title" content="Bryan Lee · Stagworks">
-<meta property="og:description" content="Small, strange games that pay attention to the player.">
-<meta property="og:image" content="assets/ri/cover.jpg">
+<meta property="og:description" content="Founder of Stagworks. Games that pay attention to the player.">
+<meta property="og:image" content="https://codingguardsman.github.io/assets/ri/cover.jpg">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=Cinzel:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="nav">
-  <a class="brand" href="#top"><span class="brand-mark">S</span> Stagworks</a>
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><span class="brand-mark">S</span><span>Stagworks</span></a>
   <nav>
     <a href="#games">Games</a>
-    <a href="#work">Other work</a>
-    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Projects</a>
+    <a class="nav-cta" href="#contact">Contact</a>
   </nav>
 </header>
 
 <main id="top">
 
+  <!-- Hero: two worlds -->
   <section class="hero">
-    <p class="eyebrow">Bryan Lee · solo game developer</p>
-    <h1>Small, strange games<br>that <em>pay attention</em> to the player.</h1>
-    <p class="lede">I design, write and build games end to end, from 3D dungeons in Unity to browser games that read your clock. These are the projects I'm proudest of.</p>
-    <div class="hero-links">
-      <a class="btn" href="#games">See the games</a>
-      <a class="btn ghost" href="https://github.com/CodingGuardsman" target="_blank" rel="noopener">GitHub ↗</a>
+    <a class="world world-ri" href="#royal-interrogator" aria-label="Royal Interrogator">
+      <img src="assets/ri/02_room.jpg" alt="">
+      <span class="world-label"><small>Unity · Early Access</small>Royal Interrogator</span>
+    </a>
+    <a class="world world-ac" href="#after-class" aria-label="After Class">
+      <img src="assets/ac/07-corrupt.jpg" alt="">
+      <span class="world-label"><small>JavaScript · Electron</small>After Class</span>
+    </a>
+    <div class="hero-card">
+      <p class="eyebrow">Bryan Lee · Founder, Stagworks</p>
+      <h1>Games that <em>pay attention</em><br>to the player.</h1>
+      <p class="lede">I design, write and build games end to end, and I bring the same rigour from software engineering at EY and business analysis at FPT Software.</p>
+      <div class="hero-links">
+        <a class="btn" href="#games">See the games</a>
+        <a class="btn ghost" href="#experience">Experience</a>
+      </div>
     </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
   </section>
 
-  <section id="games" class="games">
+  <!-- Stats strip -->
+  <section class="stats reveal">
+    <div><strong>2</strong><span>commercial games shipped</span></div>
+    <div><strong>60+</strong><span>hand-written prisoner cases</span></div>
+    <div><strong>EY</strong><span>technology consulting</span></div>
+    <div><strong>#1</strong><span>FPT Intern of the Year 2024</span></div>
+  </section>
 
-    <!-- Royal Interrogator -->
-    <article class="game ri">
-      <div class="game-visual">
-        <div class="game-media">
+  <div id="games"></div>
+
+  <!-- Royal Interrogator -->
+  <section class="game ri" id="royal-interrogator">
+    <div class="game-bg" style="background-image:url(assets/ri/03_queue.jpg)"></div>
+    <div class="game-inner">
+      <div class="game-copy reveal">
+        <p class="kicker">01 · Unity HDRP · C# · Windows</p>
+        <h2 class="game-title">Royal Interrogator</h2>
+        <p class="tagline">Question, search and judge the prisoners of a medieval dungeon, and uncover a plot against the king.</p>
+        <p>Each morning the guards line up a new queue. Read the ledger, hold every answer up against the evidence on your desk, search prisoners for tattoos and hidden blades, then decide who is lying and what they deserve. Every verdict shifts the king's favour, the people's trust and four watching factions.</p>
+        <ul class="facts">
+          <li><strong>21</strong>days</li>
+          <li><strong>60+</strong>prisoners</li>
+          <li><strong>8</strong>endings</li>
+          <li><strong>7</strong>chapters</li>
+        </ul>
+        <p class="role"><span>My role</span>Solo developer: design, writing, C# systems, level building, and an asset pipeline in Blender, MakeHuman, Mixamo and Python.</p>
+        <div class="links">
+          <a class="btn" href="https://stagworks.itch.io/royal-interrogator" target="_blank" rel="noopener">Buy on itch.io · $5.99 ↗</a>
+          <span class="badge">Early Access</span>
+        </div>
+      </div>
+      <div class="game-visual reveal">
+        <div class="frame">
           <video src="assets/ri/clip.mp4" poster="assets/ri/02_room.jpg" autoplay muted loop playsinline preload="metadata"></video>
         </div>
-        <div class="gallery" data-gallery="ri">
+        <div class="gallery">
           <img src="assets/ri/01_title.jpg" alt="Royal Interrogator title screen" loading="lazy">
           <img src="assets/ri/03_queue.jpg" alt="Prisoners queued in the corridor" loading="lazy">
           <img src="assets/ri/04_corridor_prisoner.jpg" alt="A prisoner waiting in the dungeon corridor" loading="lazy">
           <img src="assets/ri/05_torture_room.jpg" alt="The torture room" loading="lazy">
         </div>
       </div>
-      <div class="game-body">
-        <p class="game-kicker">Unity · HDRP · Windows · Early Access</p>
-        <h2 class="game-title">Royal Interrogator</h2>
-        <p class="game-tag">Question, search and judge the prisoners of a medieval dungeon, and uncover a plot against the king.</p>
-        <p>A first-person interrogation game. Each morning the guards line up a new queue of prisoners. You read the ledger, examine the evidence, search them for tattoos and hidden blades, then decide who is lying and what they deserve. Every judgement shifts the king's favour, the people's trust and four watching factions.</p>
-        <ul class="facts">
-          <li><strong>21</strong> days</li>
-          <li><strong>60+</strong> prisoners</li>
-          <li><strong>8</strong> endings</li>
-          <li><strong>7</strong> chapters</li>
-        </ul>
-        <p class="role"><span>My role</span> Solo developer: design, writing, C# systems, level building, asset pipeline (Blender, MakeHuman, Mixamo), voice and art tooling.</p>
-        <div class="game-links">
-          <a class="btn" href="https://stagworks.itch.io/royal-interrogator" target="_blank" rel="noopener">Buy on itch.io · $5.99 ↗</a>
-          <span class="status">Early Access</span>
-        </div>
-      </div>
-    </article>
+    </div>
+  </section>
 
-    <!-- After Class -->
-    <article class="game ac">
-      <div class="game-visual">
-        <div class="game-media">
-          <img src="assets/ac/01-title.jpg" alt="After Class title screen">
+  <!-- After Class -->
+  <section class="game ac" id="after-class">
+    <div class="game-bg" style="background-image:url(assets/ac/02-hina.jpg)"></div>
+    <div class="game-inner flip">
+      <div class="game-copy reveal">
+        <p class="kicker">02 · JavaScript · Electron · Web &amp; Windows</p>
+        <h2 class="game-title">After Class</h2>
+        <p class="tagline">A dating sim about the last week before summer. Summer never comes.</p>
+        <p>It starts as a sincere romance: three classmates, five afternoons, and a school PA system that keeps the week looping. On the second playthrough the girls remember, and the game starts noticing you: your real clock, your tab-outs, your cursor, and files that appear next to the .exe.</p>
+        <ul class="facts">
+          <li><strong>3</strong>routes</li>
+          <li><strong>3</strong>endings</li>
+          <li><strong>20+</strong>meta tricks</li>
+          <li><strong>1–2</strong>hours</li>
+        </ul>
+        <p class="role"><span>My role</span>Solo developer: story and script, a custom branching dialogue engine in vanilla JS, procedural music, a speaking PA voice, and an Electron desktop build.</p>
+        <div class="links">
+          <a class="btn" href="https://stagworks.itch.io/after-class" target="_blank" rel="noopener">Buy on itch.io · $4.99 ↗</a>
+          <a class="btn ghost" href="https://codingguardsman.github.io/DatingSimAlex/" target="_blank" rel="noopener">Play free demo ↗</a>
         </div>
-        <div class="gallery" data-gallery="ac">
+        <p class="cw">Content warning: flashing lights, glitch effects, sudden loud sounds.</p>
+      </div>
+      <div class="game-visual reveal">
+        <div class="frame"><img src="assets/ac/01-title.jpg" alt="After Class title screen"></div>
+        <div class="gallery">
           <img src="assets/ac/02-hina.jpg" alt="Hina, the class rep" loading="lazy">
           <img src="assets/ac/03-rei.jpg" alt="Rei in the darkroom" loading="lazy">
           <img src="assets/ac/04-sayo.jpg" alt="Sayo in the infirmary" loading="lazy">
           <img src="assets/ac/07-corrupt.jpg" alt="A corrupted scene" loading="lazy">
         </div>
       </div>
-      <div class="game-body">
-        <p class="game-kicker">HTML · JavaScript · Electron · Web &amp; Windows</p>
-        <h2 class="game-title">After Class</h2>
-        <p class="game-tag">A dating sim about the last week before summer. Summer never comes.</p>
-        <p>A psychological horror visual novel that starts out as a sincere romance. Three classmates, five afternoons, and a school PA system that keeps the week looping. On the second playthrough the girls remember, and the game starts noticing you: your real clock, your tab-outs, your cursor, and files that appear next to the .exe.</p>
-        <ul class="facts">
-          <li><strong>3</strong> routes</li>
-          <li><strong>3</strong> endings</li>
-          <li><strong>20+</strong> fourth-wall tricks</li>
-          <li><strong>1–2</strong> hours</li>
-        </ul>
-        <p class="role"><span>My role</span> Solo developer: story and script, a custom VN engine in vanilla JS, procedural music and a speaking PA voice, Electron desktop build.</p>
-        <div class="game-links">
-          <a class="btn" href="https://stagworks.itch.io/after-class" target="_blank" rel="noopener">Buy on itch.io · $4.99 ↗</a>
-          <a class="btn ghost" href="https://codingguardsman.github.io/DatingSimAlex/" target="_blank" rel="noopener">Free demo ↗</a>
-        </div>
-        <p class="cw">Content warning: flashing lights, glitch effects, sudden loud sounds.</p>
-      </div>
-    </article>
-
+    </div>
   </section>
 
-  <section id="work" class="work">
-    <h2 class="section-title">Other work</h2>
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="section-head reveal">
+      <p class="kicker">Experience</p>
+      <h2>Where I've built things</h2>
+    </div>
+    <ol class="timeline">
+      <li class="reveal">
+        <span class="when">Sep 2026 – Present</span>
+        <h3>Founder &amp; Game Developer <em>· Stagworks</em></h3>
+        <p>Founded an independent studio and shipped two commercial PC games on itch.io as sole developer, from design and code to builds, storefronts and release.</p>
+      </li>
+      <li class="reveal">
+        <span class="when">Aug 2025 – Jan 2026</span>
+        <h3>Technology Consultant, Software Engineering <em>· EY</em></h3>
+        <p>Built OutSystems features for the SkillsFuture SG Tuition Grant System, optimised Oracle SQL, and automated DEV-to-UAT testing in Katalon and Postman, saving about 2 hours per run.</p>
+      </li>
+      <li class="reveal">
+        <span class="when">Apr 2024 – Aug 2024</span>
+        <h3>IT Business Analyst <em>· FPT Software</em></h3>
+        <p><strong>FPT Intern of the Year 2024</strong>, picked from 30 interns. Shaped APPRO, a loan and card processing platform, and automated Excel processing to cut turnaround by 80%.</p>
+      </li>
+      <li class="reveal">
+        <span class="when">Jan 2024 – Dec 2026</span>
+        <h3>BSc Business Analytics, Minor in Data Science <em>· SUSS</em></h3>
+        <p>CGPA 4.03 / 5.00, on track for Honours (Distinction). Final-year project: an XGBoost portfolio framework predicting 5-day returns.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Other work -->
+  <section class="section" id="work">
+    <div class="section-head reveal">
+      <p class="kicker">Projects</p>
+      <h2>Other things I've made</h2>
+    </div>
     <div class="cards">
-      <a class="card" href="https://codingguardsman.github.io/anl488-portfolio-dashboard/" target="_blank" rel="noopener">
-        <p class="card-kicker">JavaScript · Data</p>
+      <a class="card reveal" href="https://codingguardsman.github.io/anl488-portfolio-dashboard/" target="_blank" rel="noopener">
+        <span class="card-kicker">JavaScript · Machine learning</span>
         <h3>ANL488 Portfolio Dashboard</h3>
         <p>Interactive dashboard comparing XGBoost, Ridge and Random Forest investment strategies.</p>
         <span class="card-link">Live site ↗</span>
       </a>
-      <a class="card" href="https://github.com/CodingGuardsman/PetAdoptionApp" target="_blank" rel="noopener">
-        <p class="card-kicker">React · Node.js</p>
+      <a class="card reveal" href="https://github.com/CodingGuardsman/PetAdoptionApp" target="_blank" rel="noopener">
+        <span class="card-kicker">React · Node.js</span>
         <h3>Pet Adoption App</h3>
-        <p>Web app for searching and adopting pets, with sign-in, filters by breed and age, and a favourites list.</p>
+        <p>Search and adopt pets, with sign-in, breed and age filters, and a favourites list.</p>
         <span class="card-link">GitHub ↗</span>
       </a>
-      <a class="card" href="https://github.com/CodingGuardsman/Busmate" target="_blank" rel="noopener">
-        <p class="card-kicker">Mobile · UX design</p>
+      <a class="card reveal" href="https://github.com/CodingGuardsman/Busmate" target="_blank" rel="noopener">
+        <span class="card-kicker">Mobile · UX design</span>
         <h3>Busmate</h3>
         <p>A mobile app design that learns your bus routes from your work schedule, workplace and home.</p>
         <span class="card-link">GitHub ↗</span>
       </a>
-      <a class="card" href="https://github.com/CodingGuardsman/Game-of-Life" target="_blank" rel="noopener">
-        <p class="card-kicker">Simulation</p>
+      <a class="card reveal" href="https://github.com/CodingGuardsman/Game-of-Life" target="_blank" rel="noopener">
+        <span class="card-kicker">Simulation</span>
         <h3>Game of Life</h3>
         <p>Conway's cellular automaton with an interactive grid and generation-by-generation playback.</p>
         <span class="card-link">GitHub ↗</span>
@@ -136,28 +193,36 @@
     </div>
   </section>
 
-  <section id="about" class="about">
-    <h2 class="section-title">About</h2>
-    <div class="about-grid">
-      <p>I'm Bryan Lee, and I make games under the name <strong>Stagworks</strong>. I like games that treat the player as part of the story: a dungeon where every verdict has a cost, a dating sim that remembers you closed the tab. I work across the whole stack, from writing and systems design to 3D pipelines and shipping builds.</p>
-      <ul class="skills">
-        <li>Unity (C#, HDRP)</li>
-        <li>JavaScript / HTML / CSS</li>
-        <li>Electron</li>
-        <li>Blender</li>
-        <li>Narrative design</li>
-        <li>React · Node.js</li>
-        <li>Python</li>
-        <li>C</li>
-      </ul>
+  <!-- Skills -->
+  <section class="section skills reveal">
+    <div class="section-head">
+      <p class="kicker">Toolkit</p>
+      <h2>What I work with</h2>
+    </div>
+    <div class="skill-groups">
+      <div><h3>Games</h3><p>Unity · C# · HDRP · Blender · Electron · Narrative design</p></div>
+      <div><h3>Engineering</h3><p>JavaScript · Python · C · SQL · OutSystems · React · Node.js</p></div>
+      <div><h3>Data &amp; delivery</h3><p>Machine learning · Data modelling · Postman · Katalon · Jira · Agile</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="reveal">
+      <p class="kicker">Contact</p>
+      <h2>Let's make something<br><em>worth remembering.</em></h2>
+      <div class="contact-links">
+        <a class="btn" href="https://www.linkedin.com/in/bryan-lkh/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn ghost" href="https://github.com/CodingGuardsman" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn ghost" href="https://stagworks.itch.io" target="_blank" rel="noopener">itch.io ↗</a>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer class="foot">
-  <p>© 2026 Bryan Lee · Stagworks</p>
-  <p><a href="https://github.com/CodingGuardsman" target="_blank" rel="noopener">GitHub</a> · <a href="https://stagworks.itch.io" target="_blank" rel="noopener">itch.io</a></p>
+  <p>© 2026 Bryan Lee · Stagworks · Singapore</p>
 </footer>
 
 <div class="lightbox" hidden>
@@ -168,6 +233,18 @@
 </div>
 
 <script>
+  // sticky nav background
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('solid', scrollY > 40);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // reveal on scroll
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // lightbox
   const lb = document.querySelector('.lightbox');
   const lbImg = lb.querySelector('img');
   let set = [], idx = 0;
